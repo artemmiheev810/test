@@ -1,0 +1,41 @@
+@import "src/config/style/vars";
+.wrap {
+  padding: 10px 12px;
+  background: #FFFFFF;
+  border-radius: 48px;
+  font-size: 14px;
+  line-height: 148%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  span:nth-child(1){
+    color: $greySerif;
+    margin-right: 3px;
+
+  }
+  span:nth-child(2){
+    color: #122945;
+    margin-right: 10px;
+    transition: all .3s;
+
+  }
+  &:hover{
+    span:nth-child(2){color: $brightBlue2};
+  }
+}
+.plus {
+  cursor: pointer;
+  path {
+    transition: all .3s;
+
+    fill: $brightBlue;
+  }
+
+  &:hover{
+    path {
+      fill: $brightBlue2;
+    }
+
+  }
+}

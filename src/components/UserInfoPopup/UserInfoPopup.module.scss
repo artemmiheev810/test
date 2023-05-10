@@ -1,0 +1,49 @@
+@import "src/config/style/vars";
+.avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #efefef;
+  margin-right: 4px;
+}
+.popover{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover{
+    svg {
+      fill: $brightBlue;
+    }
+  }
+}
+
+@mixin svg {
+  fill: $greySerif;
+  transition: all .3s ;
+}
+.arrowUp{
+  svg {
+    @include svg;
+    transform: rotate(180deg);
+    fill: $brightBlue;
+  }
+}
+.arrowDown{
+  svg {
+    @include svg;
+    transform: rotate(0deg);
+  }
+}
+.overlay {
+  width: 368px;
+  background: #FFFFFF;
+  border: 1px solid #EAF0FA;
+  box-shadow: 4px 16px 50px rgba(129, 135, 163, 0.24);
+  border-radius: 4px;
+  padding: 0;
+  :global(.ant-popover-inner){
+    padding: 0 !important;
+  }
+}

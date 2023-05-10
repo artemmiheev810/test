@@ -1,0 +1,121 @@
+@import "src/config/style/vars";
+
+.info{
+  padding: 20px 32px ;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 124%;
+    color: #122945;
+  }
+  &__additional{
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 124%;
+    color: #5E7793;
+    margin-bottom: 20px;
+  }
+  &__point {
+    background: #ADBFDF;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  a{
+    font-size: 15px;
+    line-height: 124%;
+    color: #5E7793;
+    transition: all .3s;
+    &:hover{
+      color: $brightBlue
+    }
+  }
+  img{
+    margin-right: 10px;
+  }
+  margin-bottom: 8px;
+  &:last-of-type{
+    margin-bottom: 16px;
+  }
+}
+.line{
+  border: 1px solid #EAF0FA;
+}
+.list {
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+}
+.userGroup{
+  &__wrap {
+    padding-bottom: 12px;
+  }
+  &__name{
+    font-size: 15px;
+    line-height: 124%;
+    color: #5E7793;
+    padding: 8px 32px;
+  }
+}
+.user{
+  &__content {
+    font-size: 15px;
+    line-height: 140%;
+    color: #005FF8;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 8px 32px;
+    transition: all .3s;
+    &_info{
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      display: none;
+    }
+    &:hover{
+      background-color: #DEE4FE;
+      svg {
+        display: initial;
+      }
+    }
+    img {
+      border-radius: 50%;
+      background: #404042;
+      margin-right: 12px;
+    }
+  }
+}
+
+.logout {
+  cursor: pointer;
+
+  path{
+    transition: all .3s;
+  }
+  &:hover {
+    path{
+      fill: $brightBlue;
+    }
+  }
+}
+.login{
+  &:hover{
+    cursor: pointer;
+  }
+}

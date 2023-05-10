@@ -1,0 +1,11 @@
+.container{
+  position: relative;
+  background: #F1F4F9;
+  height: 100vh;
+}
+.content{
+  padding: 20px 120px;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
+  margin-left: auto;
+}

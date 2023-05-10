@@ -1,0 +1,71 @@
+@import "src/config/style/vars";
+.wrap{
+  display: flex;
+  align-items: center;
+  width: 160px;
+  justify-content: flex-end;
+}
+.arr {
+  fill: #5E7793;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover{
+    fill: $brightBlue;
+  }
+  &_left {
+    transform: rotate(90deg);
+  }
+  &_right {
+    transform: rotate(270deg);
+  }
+}
+.calendar {
+ display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 90px;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: $brightBlue;
+  cursor: pointer;
+  path {transition: all .3s};
+  &:hover {
+   path{fill: $brightBlue};
+  }
+}
+
+.overlayClassName{
+  :global(.ant-dropdown-menu){
+    position: absolute;
+    left: -90px;
+    width: 200px;
+  }
+  ul, li {
+    padding: 0 !important
+  }
+  li:not(:global(.ant-dropdown-menu-item-group)) {
+    font-size: 14px;
+    line-height: 28px;
+    color: $greySerif !important;
+    padding: 6px 20px !important;
+    &:hover {
+      background-color: $liColor !important;
+      color: #122945 !important;
+    }
+  }
+  :global(.ant-dropdown-menu-item-group-title){
+    padding: 0!important;
+  }
+  :global(.ant-dropdown-menu-item-group){
+    padding: 0 20px 20px !important;
+  }
+}
+
+.active{
+  color: $brightBlue
+}
+
+.group{
+  color: #122945 !important;
+}

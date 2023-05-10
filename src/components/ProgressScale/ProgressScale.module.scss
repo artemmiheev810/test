@@ -1,0 +1,24 @@
+@import "src/config/style/vars";
+
+.yellow {
+  color: $yellow;
+}
+.red {
+  color: $red;
+}
+.green {
+  color: $green;
+}
+.grey {
+  color: $grey;
+}
+
+.normalize {
+  margin: 0;
+}
+
+.text{
+  font-size: 14px;
+  line-height: 148%;
+  color: #122945;
+}

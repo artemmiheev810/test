@@ -1,0 +1,78 @@
+@import './src/config/style/vars';
+
+.content{
+  background-color: $dark-blue;
+  width: 240px;
+  padding: 20px 12px;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  box-sizing: border-box;
+  & > img{
+    margin-bottom: 32px;
+  }
+}
+
+@mixin activity {
+  content: '';
+  background: $whiteBack;
+  position: absolute;
+  width: calc( 100% + 24px);
+  height: 100%;
+  left: -12px;
+}
+@mixin  link {
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  max-height: 52px;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.link{
+  @include link;
+  color: $whiteTrans;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 12px;
+    display: inline-block;
+  }
+  &__active{
+    @include link;
+    color: $white;
+    svg path {
+      fill: $white;
+      fill-opacity: 1;
+    }
+    &::after{
+      @include activity
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      left: -12px;
+      background: $brightBlue;
+    }
+  }
+  &:hover{
+    svg path {
+      fill: $white;
+      fill-opacity: 1;
+    }
+    color: $white;
+    cursor: pointer;
+    &::after{
+      @include activity
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "src/config/style/vars";
+.wrap{
+  width: 100%;
+  padding: 0!important;
+  :global(.ant-picker-active-bar){
+    display: none;
+  }
+  :global(.ant-picker-clear){
+    right: 0;
+    inset-inline-end: 0 !important;
+}
+color: $grey;
+input {
+width: 50px !important;
+color: #122945 !important;
+}
+}

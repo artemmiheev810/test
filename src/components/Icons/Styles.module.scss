@@ -1,0 +1,26 @@
+@import "src/config/style/vars";
+
+.SearchIcon,  {
+  display: flex; align-items: center;
+  & svg  {
+    transition: all .1s;
+    &:hover{
+      path {
+        fill: $brightBlue;
+      }
+    }
+  }
+}
+.CloseIcon, .DownloadIcon, {
+  cursor: pointer;
+  &:hover {
+    path {
+      fill: $brightBlue2;
+    }
+  }
+}
+.PlayIcon,
+.PauseIcon {
+  cursor: pointer;
+
+}

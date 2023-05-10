@@ -1,0 +1,28 @@
+@import "src/config/style/vars";
+
+@mixin size {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.yellow {
+  @include size;
+  background: $yellow;
+  &__bright {
+    box-shadow: 0px 3px 8px rgba(237, 218, 1, 0.5);
+  }
+}
+
+.red {
+  @include size;
+  background: $red;
+}
+.green {
+  @include size;
+  background: $green;
+}
+.grey {
+  @include size;
+  background: $grey;
+}
